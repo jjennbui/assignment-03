@@ -3,13 +3,21 @@
 {
     
     "firstName": "Amber",
-    "department": "Computing"
+    "job": "IT"
 
 },
 
 {
     "firstName": "Leo",
-    "department": "Business"
+    "job": "marketer"
+
+},
+
+{
+    "firstName": "Lisa",
+    "job": "marketer"
 
 }
+
+
 ]
