@@ -4,6 +4,7 @@ export default function Card({
     year="",
     department="",
     name="",
+    job="",
     colour = "purple",
     font = 0,
     image = "icon/personTwo.png"
@@ -18,7 +19,9 @@ export default function Card({
             {degree}<br />
             {firstName}<br />
             {year}<br />
+            {job}<br/>
             {department}
         </div>
     )
 }
+
