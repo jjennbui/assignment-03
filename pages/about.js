@@ -9,6 +9,8 @@ import Link from 'next/link'
 
 export default function Home() {
 
+ 
+
   console.log(data);
   const [information, setInformation ] = useState([...data])
   
@@ -18,11 +20,11 @@ export default function Home() {
          <div className={styles.name}>Computing Employees:</div>
           {
             information && information.map((info, index) => {
-              if(info.department.toLowerCase () == "computing") {
+              if(info.job.toLowerCase () == "it") {
               return(
                 <Card key={index} 
                 firstName={info.firstName}
-                department={info.department}
+                job={info.job}
                 number={info.number} colour="floralwhite" font="15px"/>
               )
               }
@@ -32,11 +34,11 @@ export default function Home() {
           <div className={styles.name}>Business Employees:</div>
           {
             information && information.map((info, index) => {
-              if(info.department.toLowerCase () == "business") {
+              if(info.job.toLowerCase () == "marketer") {
               return(
                 <Card key={index} 
                 firstName={info.firstName}
-                department={info.department}
+                job={info.job}
                 number={info.number}
               colour="white" font="15px"/>
               )
