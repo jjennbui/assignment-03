@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
 
   console.log(data);
-  const [information, setInformation ] = useState([...data])
+  const [information, setInformation] = useState([...data])
 
   return (
 
@@ -70,32 +70,30 @@ export default function Home() {
 
         <div className={styles.grid}>
           <div className={styles.name}>Business Degrees:</div>
+
+          <div className={styles.section}> 
           {
             information && information.map((info, index) => {
-              if(info.department.toLowerCase () == "business") {
-              return(
-                <Card key={index} degree={info.degree} colour="floralwhite" font="15px"/>
-              )
+              if (info.department.toLowerCase() == "business") {
+                return (
+                  <Card key={index} degree={info.degree} colour="floralwhite" font="15px" />
+                )
               }
             })
-          }
+
+          } </div>
 
           <div className={styles.name}>Computing Degrees:</div>
+          <div className={styles.section}>
           {
             information && information.map((info, index) => {
-              if(info.department.toLowerCase () == "computing") {
-              return(
-                <Card key={index} degree={info.degree} colour="white" font="15px"/>
-              )
+              if (info.department.toLowerCase() == "computing") {
+                return (
+                  <Card key={index} degree={info.degree} colour="white" font="15px" />
+                )
               }
             })
-          }
-
-          
-
-          
-          
-
+          } </div>
         </div>
       </main>
     </>
