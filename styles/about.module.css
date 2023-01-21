@@ -9,7 +9,7 @@
     text-align: center;
     padding: 6rem;
     min-height: 100vh;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: sans-serif;
   
     
   }
@@ -19,6 +19,45 @@
     background-size: 200% 400%;
     
   }
+
+  .section{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    }
+
+    .name{
+      font-size: large;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      font-weight: bold;
+      color: whitesmoke;
+      text-shadow: 1px 1px 25px  #16abff33, 0 0 20px blue;
+      font-family: sans-serif;
+      
+    }
+
+    .homebtn{
+      box-shadow: 1px 1px 9px  #16abff33;
+      font-family:monospace;
+      text-align: center;
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 10px;
+      
+   
+
+    }
+  
+  
+
+  
+ 
+
+
+
+
+
 
   
  
