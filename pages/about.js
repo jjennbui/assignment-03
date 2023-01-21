@@ -9,45 +9,54 @@ import Link from 'next/link'
 
 export default function Home() {
 
- 
+
+
+
 
   console.log(data);
-  const [information, setInformation ] = useState([...data])
-  
-        return(
-          <>
-          <div className={styles.main}>
-         <div className={styles.name}>Computing Employees:</div>
-          {
-            information && information.map((info, index) => {
-              if(info.job.toLowerCase () == "it") {
-              return(
-                <Card key={index} 
-                firstName={info.firstName}
-                job={info.job}
-                number={info.number} colour="floralwhite" font="15px"/>
-              )
-              }
-            })
-          }
+  const [information, setInformation] = useState([...data])
 
-          <div className={styles.name}>Business Employees:</div>
+  return (
+    <>
+     
+     <div className={styles.homebtn}>
+     <a href="http://localhost:3001/">Home</a>
+     </div>
+
+      <div className={styles.main}>
+        <div className={styles.name}>Computing Employees:</div>
+        <div className={styles.section}>
           {
             information && information.map((info, index) => {
-              if(info.job.toLowerCase () == "marketer") {
-              return(
-                <Card key={index} 
-                firstName={info.firstName}
-                job={info.job}
-                number={info.number}
-              colour="white" font="15px"/>
-              )
+              if (info.job.toLowerCase() == "it") {
+                return (
+                  <Card key={index}
+                    firstName={info.firstName}
+                    job={info.job}
+                    number={info.number} colour="floralwhite" font="15px" />
+                )
               }
             })
-          }
-          </div>
-          </>
-        )
-      }
+          } </div>
+
+        <div className={styles.name}>Business Employees:</div>
+        <div className={styles.section}>
+          {
+            information && information.map((info, index) => {
+              if (info.job.toLowerCase() == "marketer") {
+                return (
+                  <Card key={index}
+                    firstName={info.firstName}
+                    job={info.job}
+                    number={info.number}
+                    colour="white" font="15px" />
+                )
+              }
+            })
+          } </div>
+      </div>
+    </>
+  )
+}
 
  
