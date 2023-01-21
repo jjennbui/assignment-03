@@ -20,7 +20,7 @@ export default function Home() {
     <>
      
      <div className={styles.homebtn}>
-     <a href="http://localhost:3001/">Home</a>
+     <a href="https://assignment-03-nine.vercel.app/">Home</a>
      </div>
 
       <div className={styles.main}>
